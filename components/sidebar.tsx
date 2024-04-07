@@ -41,12 +41,12 @@ const Sidebar = () => {
             >
                 Add note
             </Button>
-            <ul className="h-[50dvh] flex flex-col gap-2">
+            <ul className="h-[50dvh] flex flex-col gap-2 overflow-y-scroll">
                 {user?.notes?.map((note: Note) => {
                     const text = extractText(note.html);
                     return (
                         <li
-                            className={`${currentNote?.id === note?.id ? "border-2 border-gray-600" : ""} p-3 bg-slate-100 rounded-md truncate`}
+                            className={`${currentNote?.id === note?.id ? "border-2 border-gray-600" : ""} p-3 bg-slate-100 min-h-12 rounded-md truncate`}
                             onClick={() => {
                                 dispatch(setNote(note));
                             }}

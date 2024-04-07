@@ -21,7 +21,7 @@ const Tiptap = () => {
         ],
         editorProps: {
             attributes: {
-                class: "w-full h-[70dvh] border-2 rounded shadow-inner p-4"
+                class: "w-full h-[70dvh] border-2 rounded  shadow-inner p-4 overflow-y-scroll"
             }
         },
         content: currentNote?.html ?? '',
